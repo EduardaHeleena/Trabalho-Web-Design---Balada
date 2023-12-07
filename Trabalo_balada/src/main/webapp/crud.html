@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>BFF</title>
+        <meta charset="utf-8"/>
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <style>
+            label {
+                width: 200px;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Baladas For Fun</h1>
+        <div id="loading" style="display: none;">
+		</div>
+		
+		<div id="conteudo">
+        <input type="button" value="Novo" onclick="novo()"/>
+        <div id="formulario" style="display: none;">
+            <label>
+                Tema: <input type="text" id="tema"/>
+            </label><br/>
+            <label>
+                Valor do Ingresso: <input type="text" id="valor_entrada"/>
+            </label><br/>
+            <label>
+                Data do Evento: <input type="text" id="data_evento"/>
+            </label><br/>
+            <label>
+                Local do Evento: <input type="text" id="local_evento"/>
+            </label><br/>
+            <label>
+                Horário do Evento: <input type="text" id="horario"/>
+            </label><br/>
+		
+            <input type="button" value="Salvar" onclick="salvar()"/>
+            <input type="button" value="Cancelar" onclick="cancelar()"/>
+           
+        </div>
+        <div id="lista">
+            <table border="1" width="100%">
+                <thead>
+                    <th>Id</th>
+                    <th>Tema</th>
+                    <th>Valor do Ingresso</th>
+                    <th>Data do Evento</th>
+                    <th>Local do Evento</th>
+                    <th>Horario do Evento</th>
+                    <th>Opções</th>
+
+                </thead>
+                <tbody id="dados">
+
+                </tbody>
+            </table>
+       	 	</div>
+       	 </div>
+        
+        <script src="crud.js"></script>
+    </body>
+
+</html>
